@@ -19,11 +19,16 @@ $red : #FF6363;
     .cryptoPrice {
         h3 {
             font-size: 14px;
-            line-height: 5px;
+            margin: 0;
         }
 
-        .price {
+        .priceUp {
             color: $green;
         }
+
+        .priceDown {
+            color: $red;
+        }
+        
     }
 }

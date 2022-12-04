@@ -1,11 +1,12 @@
 @import url( 'https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Source+Sans+Pro:wght@400;600&display=swap');
 
+
 body,
 html {
     padding: 0;
     margin: 0;
-    overflow: hidden;
     color: white;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {

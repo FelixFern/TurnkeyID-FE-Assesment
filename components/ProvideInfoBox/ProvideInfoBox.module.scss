@@ -1,0 +1,31 @@
+$blue-accent: #27D1F7;
+
+.provideInfoBoxContainer {
+    border: 2px solid $blue-accent;
+    border-radius: 10px;
+    padding: 30px 30px;
+    
+    .header {
+        display: flex;
+        column-gap: 20px;
+        align-items: center;
+        img {
+            height: 50px;
+        }
+        .title {
+            h2 {
+                font-size: 24px;
+                margin: 0;
+            }
+
+            .highlighted {
+                color: $blue-accent;
+            }
+        }
+    }
+    p {
+        font-size: 20px;
+        margin: 0;
+        margin-top: 24px;
+    }
+}

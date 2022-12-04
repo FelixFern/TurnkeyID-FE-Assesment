@@ -1,11 +1,13 @@
 $blue-accent: #27D1F7;
 
 .hero { 
+    position: relative;
     margin: 0;
     padding: 0;
     height: 100vh;
     width: 100vw;
-
+    overflow-x: hidden;
+    
     .heroBackground {
         position: absolute;
         z-index: -1;
@@ -51,6 +53,54 @@ $blue-accent: #27D1F7;
                 right: 0;
                 width: 40vw;
             }
+        }
+    }
+}
+
+.provide {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: fit-content;
+    overflow-x: hidden;
+
+    .provideBackground {
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        top: 0;
+        z-index: -1;
+        object-fit: cover;
+    }
+    
+    .provideContent {
+        width: 80%;
+        padding: 60px 0;
+        margin: auto;
+        
+        .title {
+            text-align: center;
+            margin: auto;
+            h2 {
+                font-size: 36px;
+                margin: 0;
+            }
+            p {
+                font-size: 24px;
+                margin: 0;
+            }
+            span {
+                color: $blue-accent;
+            }
+        }
+
+        .provideInfoBoxList {
+            display: flex;
+            column-gap: 40px;
+            margin-top: 36px;
         }
     }
 }
