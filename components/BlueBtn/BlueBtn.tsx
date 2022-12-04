@@ -8,9 +8,12 @@ type BtnProps = {
 const BlueBtn = ({text, link} : BtnProps) => {
     return (
         <div className={styles.blueBtnContainer}>
-            <h1>
-                {text}
-            </h1>
+            <a href={link}>
+                <h1>
+                    {text}
+                </h1>
+
+            </a>
         </div>
     )
 }

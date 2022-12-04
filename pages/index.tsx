@@ -2,11 +2,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 import {useEffect, useState} from 'react'
 import BlueBtn from '../components/BlueBtn/BlueBtn'
+import CryptoBox from '../components/CryptoBox/CryptoBox'
 import CryptoPriceBox from '../components/CryptoPriceBox/CryptoPriceBox'
 import Navbar from '../components/Navbar/Navbar'
 import ProvideInfoBox from '../components/ProvideInfoBox/ProvideInfoBox'
 import styles from './Home.module.scss'
 
+const API_URL = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,binancecoin'
 
 export default function Home() {
 
@@ -14,7 +16,7 @@ export default function Home() {
         setCryptoPrice] : any = useState(null)
         
     useEffect(() => {
-        fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,binancecoin')
+        fetch(API_URL)
             .then((response) => response.json())
             .then((data) => {
                 console.log(data);
@@ -50,7 +52,7 @@ export default function Home() {
                             <CryptoPriceBox image='./img/eth.png' crypto='ETH / USDT' price={cryptoPrice[1].current_price} change={cryptoPrice[1].price_change_percentage_24h}></CryptoPriceBox>
                             <CryptoPriceBox image='./img/bnb.png' crypto='BNB / USDT' price={cryptoPrice[2].current_price} change={cryptoPrice[2].price_change_percentage_24h}></CryptoPriceBox>
                         </div>
-                        <BlueBtn link='' text='Explore Now!'></BlueBtn>
+                        <BlueBtn link='#provide' text='Explore Now!'></BlueBtn>
                     </div>
                     <div className={styles.rightCol}>
                         <img src="./img/hero-illustration.png" alt=""/>
@@ -58,13 +60,12 @@ export default function Home() {
                 </div>
 
             </div>
-            <div className={styles.provide}>
+            <div className={styles.provide} id='provide'>
                 <img src="../img/provide-bg.svg" className={styles.provideBackground}/>
                 <div className={styles.provideContent}>
                     <div className={styles.title}>
                         <h2>What Do We
-                            <span>
-                                Provide</span>?</h2>
+                            <span> Provide</span>?</h2>
                         <p>here are our unique feature</p>
                     </div>
                     <div className={styles.provideInfoBoxList}>
@@ -86,8 +87,39 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className={styles.decentralized}></div>
-            <footer className={styles.footer}></footer>
+            <div className={styles.decentralized}>
+                <div className={styles.decentralizedContent}>
+                    <div className={styles.leftCol}>
+                        <img src='../img/decentralized-illustration.svg'></img>
+                    </div>
+                    <div className={styles.rightCol}>
+                        <h1>Fully Decentralized <br/> <span>Exchange</span></h1>
+                        <p><span>CryptoLAB</span> provides a fully decentralized and fully secured crypto exchange experience. We always aim for user maximum satisfaction through vast majority of cryptocurrencies to be exchanged. </p>
+                        <div className={styles.cryptoList}>
+                            <CryptoBox image='./img/btc.png' crypto='Bitcoin'></CryptoBox>
+                            <CryptoBox image='./img/eth.png' crypto='Ethereum'></CryptoBox>
+                            <CryptoBox image='./img/bnb.png' crypto='BNB'></CryptoBox>
+                        </div>
+                        <h3>and many <span>more</span>!</h3>
+                    </div>
+
+                </div>
+                <div className={styles.getNotifiedContent}>
+                    <h1>Get <span>Notified!</span></h1>
+                    <p>for the latest update of the Crypto<span>LAB</span> trading platform</p>
+                    <div className={styles.inputBox}>
+                        <input type='text' placeholder='Name'></input>
+                        <input type='text' placeholder='Email'></input>
+                        <BlueBtn text='Subscribe' link='#'></BlueBtn>
+                    </div>
+                
+                </div>
+            </div>
+            <footer className={styles.footer}>
+                <div className={styles.footerContent}>
+                    <h3><span className={styles.gray}>©2022</span> Crypto<span>LAB</span></h3>
+                </div>
+            </footer>
         </div>
     )
 }

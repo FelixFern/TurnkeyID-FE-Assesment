@@ -1,0 +1,18 @@
+$dark-blue : #221C69;
+
+.cryptoBoxContainer {
+    display: flex;
+    background-color: $dark-blue;
+    border-radius: 10px;
+    align-items: center;
+    column-gap: 15px;
+    padding: 10px 20px;
+    
+    img {
+        height: 37px;
+    } 
+    h2 {
+        font-size: 20px;
+        line-height: 0;
+    }
+}

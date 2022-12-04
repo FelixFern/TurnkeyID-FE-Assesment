@@ -1,4 +1,5 @@
 $blue-accent: #27D1F7;
+$dark-blue: #080942;
 
 .hero { 
     position: relative;
@@ -28,9 +29,6 @@ $blue-accent: #27D1F7;
             width: 100%;
             h1 {
                 font-size: 48px;
-                span {
-                    color: $blue-accent;
-                }
             }
             p {
                 font-size: 20px;
@@ -92,9 +90,6 @@ $blue-accent: #27D1F7;
                 font-size: 24px;
                 margin: 0;
             }
-            span {
-                color: $blue-accent;
-            }
         }
 
         .provideInfoBoxList {
@@ -102,5 +97,106 @@ $blue-accent: #27D1F7;
             column-gap: 40px;
             margin-top: 36px;
         }
+    }
+}
+
+.decentralized {
+    background: linear-gradient(110.51deg, #080942 0%, #431C76 92.91%);
+    .decentralizedContent {
+        width: 80%;
+        padding: 60px 0;
+        display: flex;
+        margin: auto;
+        align-items: center;
+
+        .leftCol {
+            flex: 3;
+            display: flex;
+            img {
+                margin: auto;
+                height: 60vh;
+            }
+        }
+
+        .rightCol {
+            flex: 4;
+
+            .cryptoList {
+                display: flex;
+                flex-direction: column;
+                row-gap: 15px;
+            }
+
+            h1 {
+                font-size: 48px;
+                margin: 0;
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+    .getNotifiedContent {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-bottom: 60px;
+        
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        } 
+        p {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .inputBox { 
+            width: fit-content;
+            margin: auto;
+            margin-top: 20px;
+            display: flex;
+            column-gap: 10px;
+            align-self: center;
+
+            input {
+                background-color: $dark-blue;
+                border: none;
+                padding: 9px 12px;
+                height: fit-content;
+                border-radius: 10px;
+
+                &::placeholder {
+                    font-family: 'Source Sans Pro', sans-serif;
+                    font-size: 16px;
+                    color: white;
+                    opacity: .5;
+                }
+
+                &:nth-child(2) {
+                    width: 30vw;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: $dark-blue;
+    width: 100vw;
+    display: flex;
+    height: 56px;
+    align-items: center;
+    .footerContent {
+        margin: auto;
+        width: 80%;
+    }
+    .gray {
+        color: white;
+        opacity: .5;
+    }
+    h3 {
+        margin: 0;
+        font-size: 16px;
     }
 }
