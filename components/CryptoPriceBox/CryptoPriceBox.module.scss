@@ -1,0 +1,29 @@
+$purple: #431C76;
+$green : #63FF7C;
+$red : #FF6363;
+
+.cryptoPriceBoxParent {
+    display: flex;
+    background-color: $purple;
+    width: fit-content;
+    align-items: center;
+    column-gap: 10px;
+    padding: 12px 18px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #431C76;
+    
+    img {
+        height: 37px;
+    }
+
+    .cryptoPrice {
+        h3 {
+            font-size: 14px;
+            line-height: 5px;
+        }
+
+        .price {
+            color: $green;
+        }
+    }
+}

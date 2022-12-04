@@ -1,0 +1,80 @@
+$blue-accent: #27D1F7;
+
+.navbarParent {
+    z-index: 999;
+    position: absolute;
+    top: 15px;
+    align-items: center;
+    width: 100vw;
+    
+    .navbarContent {
+        display: flex;
+        width: 80%;
+        margin: auto;
+        align-items: center;
+        
+        .companyLogo {
+            flex: 1;
+            display: flex;
+            column-gap: 16px;
+            align-items: center;
+
+            img {
+                width: 36px;
+                height: 36px;
+            }
+            h1 {
+                font-size: 16px;
+                span {
+                    color: $blue-accent;
+                }
+            }
+        }
+
+        .navLinks {
+            flex: 2;
+            display: flex;
+            list-style: none;
+            column-gap: 50px;
+            justify-content: center;
+            align-items: center;
+
+            h4 {
+                font-weight: 500;
+                line-height: 0;
+            }
+            
+            .navLink {
+                position: relative;
+                box-sizing: border-box;
+                
+                .navLinkIndicator {
+                    transition: 0.2s;
+                    position: absolute;
+                    width: 0px;
+                    bottom: 2px;
+                    left: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    height: 2px;
+                    background-color: $blue-accent;
+                }
+
+                &:hover {
+                    a {
+                        opacity: .8;
+                    }
+                    .navLinkIndicator {
+                        width: 25px;
+                    }
+                }
+            }
+        }
+        .cta {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+}
