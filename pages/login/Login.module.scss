@@ -1,0 +1,78 @@
+$blue-accent: #27D1F7;
+
+.loginContainer {
+    display: flex;
+    overflow-y: hidden;
+    width: 100vw;
+    height: 100vh;
+
+    .leftCol {
+        flex: 3;
+        background: linear-gradient(107.27deg, #080942 0%, #431C76 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            height: 75%;
+        }
+    }
+    .rightCol {
+        flex: 2;
+        display: flex;
+        align-items: center;
+
+        .rightColBg {
+            position: absolute;
+            top: 0;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .content {
+            width: 80%;
+            height: fit-content;
+            margin: auto;
+            .companyLogo {
+                width: 100%;
+                display: flex;
+                margin-bottom: 65px;
+                align-items: center;
+                column-gap: 18px;
+                img {
+                    width: 40px;
+                    height: auto;
+                }
+                h1 {
+                    margin: 0;
+                    font-size: 24px;
+                }
+            }
+            .loginForm {
+                display: flex;
+                flex-direction: column;
+                row-gap: 25px;
+
+                .inputForm {
+                    color: white;
+                    background-color: transparent;
+                    border: 1px solid $blue-accent;
+                    padding: 8px 20px;
+                    border-radius: 20px;
+                    
+                    &::placeholder {
+                        color: white;
+                        font-family: 'Source Sans Pro';
+                        opacity: .5;
+                    }
+                }
+            }
+            .loginBtn {
+                margin-top: 16px;
+                display: flex;
+                column-gap: 10px;
+            }
+        }
+    }
+
+}

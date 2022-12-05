@@ -37,7 +37,7 @@ const Navbar = () => {
                     </li>
                 </ul>
                 <div className={styles.cta}>
-                    <BlueBtn link='' text='Join Now!'></BlueBtn>
+                    <BlueBtn link='/login' text='Join Now!' type={0}></BlueBtn>
                 </div>
             </div>
         </div>

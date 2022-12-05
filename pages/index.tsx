@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import {useEffect, useState} from 'react'
+import { motion } from "framer-motion"
 import BlueBtn from '../components/BlueBtn/BlueBtn'
 import CryptoBox from '../components/CryptoBox/CryptoBox'
 import CryptoPriceBox from '../components/CryptoPriceBox/CryptoPriceBox'
@@ -11,9 +11,7 @@ import styles from './Home.module.scss'
 const API_URL = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,binancecoin'
 
 export default function Home() {
-
-    const [cryptoPrice,
-        setCryptoPrice] : any = useState(null)
+    const [cryptoPrice, setCryptoPrice] : any = useState(null)
         
     useEffect(() => {
         fetch(API_URL)
@@ -52,7 +50,7 @@ export default function Home() {
                             <CryptoPriceBox image='./img/eth.png' crypto='ETH / USDT' price={cryptoPrice[1].current_price} change={cryptoPrice[1].price_change_percentage_24h}></CryptoPriceBox>
                             <CryptoPriceBox image='./img/bnb.png' crypto='BNB / USDT' price={cryptoPrice[2].current_price} change={cryptoPrice[2].price_change_percentage_24h}></CryptoPriceBox>
                         </div>
-                        <BlueBtn link='#provide' text='Explore Now!'></BlueBtn>
+                        <BlueBtn link='#provide' text='Explore Now!' type={0}></BlueBtn>
                     </div>
                     <div className={styles.rightCol}>
                         <img src="./img/hero-illustration.png" alt=""/>
@@ -110,7 +108,7 @@ export default function Home() {
                     <div className={styles.inputBox}>
                         <input type='text' placeholder='Name'></input>
                         <input type='text' placeholder='Email'></input>
-                        <BlueBtn text='Subscribe' link='#'></BlueBtn>
+                        <BlueBtn text='Subscribe' link='#' type={0}></BlueBtn>
                     </div>
                 
                 </div>

@@ -1,0 +1,40 @@
+<svg
+    width="710"
+    height="800"
+    viewBox="0 0 710 800"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <rect width="710" height="800" fill="#431C76"/>
+    <mask
+        id="mask0_45_2"
+        style="mask-type:alpha"
+        maskUnits="userSpaceOnUse"
+        x="0"
+        y="0"
+        width="710"
+        height="800">
+        <rect width="710" height="800" fill="#D9D9D9"/>
+    </mask>
+    <g mask="url(#mask0_45_2)">
+        <ellipse
+            cx="72.1255"
+            cy="792.17"
+            rx="223.227"
+            ry="202.752"
+            fill="#844DA3"
+            fill-opacity="0.2"/>
+        <circle
+            cx="612.267"
+            cy="45.2734"
+            r="216.267"
+            fill="#844DA3"
+            fill-opacity="0.2"/>
+        <ellipse
+            cx="690.482"
+            cy="258.571"
+            rx="169.369"
+            ry="165.019"
+            fill="#844DA3"
+            fill-opacity="0.2"/>
+    </g>
+</svg>
