@@ -57,7 +57,6 @@ export default function Home() {
                                     Explore Now!
                                 </h1>
                             </a>
-
                         </div>
                     </div>
                     <div className={styles.rightCol}>
