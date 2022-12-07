@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import {useEffect, useState} from 'react'
-import { motion } from "framer-motion"
 import BlueBtn from '../components/BlueBtn/BlueBtn'
 import CryptoBox from '../components/CryptoBox/CryptoBox'
 import CryptoPriceBox from '../components/CryptoPriceBox/CryptoPriceBox'
