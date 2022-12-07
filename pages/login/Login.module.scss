@@ -33,7 +33,10 @@ $blue-accent: #27D1F7;
             width: 80%;
             height: fit-content;
             margin: auto;
+
             .companyLogo {
+                transition: 0.5s;
+                cursor: pointer;
                 width: 100%;
                 display: flex;
                 margin-bottom: 65px;
@@ -47,6 +50,9 @@ $blue-accent: #27D1F7;
                     margin: 0;
                     font-size: 24px;
                 }
+                &:hover {
+                    opacity: .8;
+                }
             }
             .loginForm {
                 display: flex;
@@ -59,11 +65,11 @@ $blue-accent: #27D1F7;
                     border: 1px solid $blue-accent;
                     padding: 8px 20px;
                     border-radius: 20px;
-                    
+
                     &::placeholder {
                         color: white;
                         font-family: 'Source Sans Pro';
-                        opacity: .5;
+                        opacity: 0.5;
                     }
                 }
             }
@@ -75,4 +81,18 @@ $blue-accent: #27D1F7;
         }
     }
 
+}
+@media only screen and (max-width: 1000px) {
+    .loginContainer {
+        .leftCol {
+            display: none;
+        }
+        .rightCol {
+
+            .rightColBg {
+                height: 100vh;
+                width: 100vw;
+            }
+        }
+    }
 }

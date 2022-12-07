@@ -7,12 +7,13 @@ import CryptoPriceBox from '../components/CryptoPriceBox/CryptoPriceBox'
 import Navbar from '../components/Navbar/Navbar'
 import ProvideInfoBox from '../components/ProvideInfoBox/ProvideInfoBox'
 import styles from './Home.module.scss'
+import Loading from '../components/Loading/Loading'
 
 const API_URL = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,binancecoin'
 
 export default function Home() {
     const [cryptoPrice, setCryptoPrice] : any = useState(null)
-        
+    console.log(cryptoPrice)
     useEffect(() => {
         fetch(API_URL)
             .then((response) => response.json())
@@ -25,7 +26,7 @@ export default function Home() {
             });
     }, [])
 
-    if (!cryptoPrice) return <h1>Loading ...</h1>
+    if (!cryptoPrice) return <Loading></Loading>
     return (
         <div className={styles.container}>
             <Head>

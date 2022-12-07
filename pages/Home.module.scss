@@ -4,6 +4,7 @@ $dark-blue: #080942;
 .hero { 
     position: relative;
     margin: 0;
+    margin-bottom: -2px;
     padding: 0;
     height: 100vh;
     width: 100vw;
@@ -46,10 +47,11 @@ $dark-blue: #080942;
             width: 100%;
             height: 100%;
             img {
+                z-index: -1;
                 position: absolute;
                 bottom: 0;
                 right: 0;
-                width: 40vw;
+                height: 95vh;
             }
         }
     }
@@ -200,5 +202,80 @@ $dark-blue: #080942;
     h3 {
         margin: 0;
         font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .hero { 
+        .heroContent {
+            display: flex;
+            width: 80%;
+            height: 100%;
+            margin: auto;
+            align-items: center;
+            
+            .leftCol {
+                flex: 1;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h1 {
+                    text-align: center;
+                }
+                p {
+                    text-align: center;
+
+                }
+                .cryptoPriceBoxList {
+                    flex-direction: column;
+                    margin: 0;
+                    row-gap: 20px;
+                    margin-bottom: 20px;
+                }
+                
+            }
+            .rightCol {
+                flex: 0;
+                img {
+                    opacity: .4;
+                    transform: translateX(50%);
+                }
+            }
+        }
+    }
+    .provideInfoBoxList {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .decentralized {
+        .decentralizedContent {
+            flex-direction: column;
+
+            .leftCol {
+                img {
+                    height: 30vh;
+                }
+            }
+        }
+    }
+    .getNotifiedContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .inputBox { 
+            flex-direction: column;
+            align-items: center;
+            row-gap: 15px;
+            input {
+                &:nth-child(1) {
+                    width: 65vw;
+                }
+                &:nth-child(2) {
+                    width: 65vw !important;
+                }
+            }
+        }
     }
 }

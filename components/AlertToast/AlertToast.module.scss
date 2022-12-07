@@ -1,7 +1,10 @@
+$red: #FF4A4A;
+
 .AlertToastParent {
+    width: fit-content;
     transition: 0.6s ease;
     position: relative;
-    background-color: #FF4A4A;
+    background-color: $red;
     padding: 5px 20px;
     border-radius: 10px;
     display: flex;

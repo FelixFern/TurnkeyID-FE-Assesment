@@ -1,8 +1,10 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import BlueBtn from '../../components/BlueBtn/BlueBtn'
 import styles from './Login.module.scss'
 
 const Login = () => {
+    const router = useRouter()
     return (
         <div className={styles.loginContainer}>
             <div className={styles.leftCol}>
@@ -11,7 +13,9 @@ const Login = () => {
             <div className={styles.rightCol}>
                 <img className={styles.rightColBg} src="../img/login-bg.svg" alt=""/>
                 <div className={styles.content}>
-                    <div className={styles.companyLogo}>
+                    <div className={styles.companyLogo} onClick={() => {
+                        router.push('/')
+                    }}>
                         <img src="../img/logo.svg" alt=""/>
                         <h1>Crypto<span>LAB</span>
                         </h1>
