@@ -2,6 +2,7 @@
 $blue-accent: #27D1F7;
 $dark-purple: #080942;
 $red: #FF4A4A;
+$purple: #431C76;
 
 .registerContainer {
     display: flex;
@@ -30,19 +31,21 @@ $red: #FF4A4A;
         flex: 2;
         display: flex;
         align-items: center;
+        background-color: $purple;
 
         .rightColBg {
             position: absolute;
             top: 0;
             height: 100vh;
             object-fit: cover;
-            z-index: -1;
+            z-index: 1;
         }
 
         .content {
             width: 80%;
             height: fit-content;
             margin: auto;
+            z-index: 2;
             
             .companyLogo {
                 transition: 0.5s;

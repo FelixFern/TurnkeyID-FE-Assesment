@@ -1,5 +1,6 @@
 @import url( 'https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Source+Sans+Pro:wght@400;600&display=swap');
 $blue-accent: #27D1F7;
+$purple: #431C76;
 
 .loginContainer {
     display: flex;
@@ -21,19 +22,21 @@ $blue-accent: #27D1F7;
         flex: 2;
         display: flex;
         align-items: center;
+        background-color: $purple;
 
         .rightColBg {
             position: absolute;
             top: 0;
             height: 100vh;
             object-fit: cover;
-            z-index: -1;
+            z-index: 1;
         }
 
         .content {
             width: 80%;
             height: fit-content;
             margin: auto;
+            z-index: 2;
 
             .companyLogo {
                 transition: 0.5s;
