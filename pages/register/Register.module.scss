@@ -156,6 +156,8 @@ $red: #FF4A4A;
 
 @media only screen and (max-width: 1000px) {
     .registerContainer {
+        height: 100vh;
+        overflow-y: hidden;
         .leftCol {
             display: none;
         }
@@ -178,6 +180,9 @@ $red: #FF4A4A;
                             flex: 1;
                         }
                     }
+                }
+                .companyLogo {
+                    margin-bottom: 10px;
                 }
             }
         }

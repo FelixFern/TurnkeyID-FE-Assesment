@@ -85,6 +85,8 @@ $blue-accent: #27D1F7;
 }
 @media only screen and (max-width: 1000px) {
     .loginContainer {
+        height: 100vh;
+        overflow-y: hidden;
         .leftCol {
             display: none;
         }
@@ -92,6 +94,11 @@ $blue-accent: #27D1F7;
             .rightColBg {
                 height: 100vh;
                 width: 100vw;
+            }
+            .content {
+                .companyLogo {
+                    margin-bottom: 10px;
+                }
             }
         }
     }
