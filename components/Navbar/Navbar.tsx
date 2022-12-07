@@ -85,7 +85,7 @@ const Navbar = () => {
                             <div className={styles.navLinkIndicator}></div>
                         </li>
                         <li className={[styles.navLinkPrimary, styles.navLink].join(' ')}>
-                            <Link href="">
+                            <Link href="/login">
                                 <h4>Join Now!</h4>
                             </Link>
                             <div className={styles.navLinkIndicator}></div>
