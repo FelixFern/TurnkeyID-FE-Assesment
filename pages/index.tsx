@@ -13,6 +13,7 @@ const API_URL = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&
 export default function Home() {
     const [cryptoPrice, setCryptoPrice] : any = useState(null)
     useEffect(() => {
+        document.title = "Home | CryptoLAB"
         fetch(API_URL)
             .then((response) => response.json())
             .then((data) => {

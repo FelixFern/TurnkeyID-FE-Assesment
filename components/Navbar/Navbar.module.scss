@@ -4,27 +4,23 @@ $dark-purple: #080942;
 .navbarParentMobile {
     display: none;
 }
-
 .navbarParent {
     z-index: 999;
     position: absolute;
     top: 15px;
     align-items: center;
     width: 100vw;
-    
     .navbarContent {
         display: flex;
         width: 80%;
         margin: auto;
         align-items: center;
-        
         .companyLogo {
             flex: 1;
             display: flex;
             column-gap: 16px;
             align-items: center;
             cursor: pointer;
-
             img {
                 width: 36px;
                 height: 36px;
@@ -36,7 +32,6 @@ $dark-purple: #080942;
                 }
             }
         }
-
         .navLinks {
             flex: 2;
             display: flex;
@@ -44,7 +39,6 @@ $dark-purple: #080942;
             column-gap: 50px;
             justify-content: center;
             align-items: center;
-
             h4 {
                 font-weight: 500;
                 line-height: 0;
@@ -53,7 +47,6 @@ $dark-purple: #080942;
             .navLink {
                 position: relative;
                 box-sizing: border-box;
-                
                 .navLinkIndicator {
                     transition: 0.2s;
                     position: absolute;
@@ -65,7 +58,6 @@ $dark-purple: #080942;
                     height: 2px;
                     background-color: $blue-accent;
                 }
-
                 &:hover {
                     a {
                         opacity: .8;
@@ -96,8 +88,6 @@ $dark-purple: #080942;
         position: absolute;
         align-items: center;
         width: 100vw;
-        
-        
         .navbarContent {
             background-color: $dark-purple;
             height: 100%;

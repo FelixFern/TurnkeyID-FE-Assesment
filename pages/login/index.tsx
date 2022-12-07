@@ -1,10 +1,16 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 import BlueBtn from '../../components/BlueBtn/BlueBtn'
 import styles from './Login.module.scss'
 
 const Login = () => {
+    useEffect(() => {
+        document.title = "Login | CryptoLAB"
+    }, [])
+    
     const router = useRouter()
+    
     return (
         <div className={styles.loginContainer}>
             <div className={styles.leftCol}>
