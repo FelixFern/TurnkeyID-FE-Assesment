@@ -51,7 +51,14 @@ export default function Home() {
                             <CryptoPriceBox image='./img/eth.png' crypto='ETH / USDT' price={cryptoPrice[1].current_price} change={cryptoPrice[1].price_change_percentage_24h}></CryptoPriceBox>
                             <CryptoPriceBox image='./img/bnb.png' crypto='BNB / USDT' price={cryptoPrice[2].current_price} change={cryptoPrice[2].price_change_percentage_24h}></CryptoPriceBox>
                         </div>
-                        <BlueBtn link='#provide' text='Explore Now!' type={0}></BlueBtn>
+                        <div className={styles.exploreBtn}>
+                            <a href='#provide'>
+                                <h1>
+                                    Explore Now!
+                                </h1>
+                            </a>
+
+                        </div>
                     </div>
                     <div className={styles.rightCol}>
                         <img src="./img/hero-illustration.png" alt=""/>

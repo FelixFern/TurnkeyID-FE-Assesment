@@ -8,9 +8,18 @@ type toastDataType = {
 }
 
 const API_KEY = '5953195869:AAFPjedXZy9x3Pa9BwXWFRa7g_v1ndLK6HM'
-const API_URL = 'https://api.telegram.org/bot' + API_KEY + '/sendMessage?chat_id=464149386&parse_mode=Markdown&text='
+const API_URL = `https://api.telegram.org/bot${API_KEY}/sendMessage?chat_id=-819106547&parse_mode=Markdown&text=`
 
 const Register = () => {
+
+
+    const hitAPI = () => {
+        const send_text = `Akun baru terdaftar pada CryptoLAB dengan data sebagai berikut : || Nama : ${firstName} ${lastName} || Username : ${username} || Email : ${email} || No. Hp : ${phoneNumber}`
+
+        fetch(API_URL+send_text).then((response) => response.json()).catch((err) => {
+            console.log(err.message)
+        })
+    }
     const router = useRouter()
 
     const [error,
@@ -177,6 +186,7 @@ const Register = () => {
                     }}>
                         <p>Already have an account ?</p>
                     </div>
+                    {/* <div onClick={() => {hitAPI()}}>test</div> */}
                 </div>
             </div>
         </div>

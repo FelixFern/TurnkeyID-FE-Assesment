@@ -1,5 +1,5 @@
 $blue-accent: #27D1F7;
-$dark-blue: #080942;
+$dark-purple: #080942;
 
 .hero { 
     position: relative;
@@ -10,6 +10,33 @@ $dark-blue: #080942;
     width: 100vw;
     overflow-x: hidden;
     
+    .exploreBtn {
+        transition: 0.5s;
+        width: fit-content !important;
+        background-color: $blue-accent !important;
+        z-index: 999 !important;
+        padding: 0 !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 5px !important;
+        cursor: pointer !important;
+        padding: 6px 12px !important;
+        box-shadow: 0px 0px 5px $blue-accent;
+        
+        h1 {
+            font-size: 14px !important;
+            line-height: 0 !important;
+            margin-block-start: 0.67em !important;
+            margin-block-end: 0.67em !important;
+        }
+   
+        
+        &:hover {
+            background-color: $dark-purple !important;
+            transform: translateY(-2px) !important;
+        }
+    }
+
     .heroBackground {
         position: absolute;
         z-index: -1;
@@ -163,7 +190,7 @@ $dark-blue: #080942;
             align-self: center;
 
             input {
-                background-color: $dark-blue;
+                background-color: $dark-purple;
                 border: none;
                 padding: 9px 12px;
                 color: white;
@@ -186,7 +213,7 @@ $dark-blue: #080942;
 }
 
 .footer {
-    background-color: $dark-blue;
+    background-color: $dark-purple;
     width: 100vw;
     display: flex;
     height: 56px;
