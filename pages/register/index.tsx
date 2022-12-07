@@ -1,5 +1,5 @@
 import {useRouter} from 'next/router'
-import {useEffect, useState} from 'react'
+import {useState} from 'react'
 import AlertToast from '../../components/AlertToast/AlertToast'
 import styles from './Register.module.scss'
 
@@ -11,15 +11,6 @@ const API_KEY = '5953195869:AAFPjedXZy9x3Pa9BwXWFRa7g_v1ndLK6HM'
 const API_URL = `https://api.telegram.org/bot${API_KEY}/sendMessage?chat_id=-819106547&parse_mode=Markdown&text=`
 
 const Register = () => {
-
-
-    const hitAPI = () => {
-        const send_text = `Akun baru terdaftar pada CryptoLAB dengan data sebagai berikut : || Nama : ${firstName} ${lastName} || Username : ${username} || Email : ${email} || No. Hp : ${phoneNumber}`
-
-        fetch(API_URL+send_text).then((response) => response.json()).catch((err) => {
-            console.log(err.message)
-        })
-    }
     const router = useRouter()
 
     const [error,
@@ -58,7 +49,6 @@ const Register = () => {
 
     const handleSubmit = () => {
         setError(false)
-        console.log(validateEmail(email))
         if (firstName != '' && lastName != '' && username != '' && email != '' && password != '' && phoneNumber != '' && confirmPassword != '') {
             if (!validatePassword(password, confirmPassword).state) {
                 setError(true)
