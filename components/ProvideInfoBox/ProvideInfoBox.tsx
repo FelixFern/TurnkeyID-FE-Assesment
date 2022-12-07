@@ -17,7 +17,7 @@ const ProvideInfoBox = ({icon, highlightedTitle, title, desc} : ProvideInfoBox) 
     return (
         <div className={styles.provideInfoBoxContainer}>
             <div className={styles.header}>
-                <img src={icons[icon]}></img>
+                <img src={icons[icon]} alt='crypto-coin' loading="lazy"></img>
                 <div className={styles.title}>
                     <h2 className={styles.highlighted}>{highlightedTitle}</h2>
                     <h2>{title}</h2>

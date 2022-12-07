@@ -101,15 +101,15 @@ const Register = () => {
                 })}
             </div>
             <div className={styles.leftCol}>
-                <img src="../img/decentralized-illustration.svg"></img>
+                <img src="../img/decentralized-illustration.svg" alt='decentralized-illustration' loading="lazy"></img>
             </div>
             <div className={styles.rightCol}>
-                <img className={styles.rightColBg} src="../img/login-bg.svg" alt=""/>
+                <img className={styles.rightColBg} alt='login-bg' src="../img/login-bg.svg" loading="lazy"/>
                 <div className={styles.content}>
                     <div className={styles.companyLogo} onClick={() => {
                         router.push('/')
                     }}>
-                        <img src="../img/logo.svg" alt=""/>
+                        <img src="../img/logo.svg" alt='logo-cryptolab' loading="lazy"/>
                         <h1>Crypto<span>LAB</span>
                         </h1>
                     </div>

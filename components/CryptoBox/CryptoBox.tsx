@@ -9,7 +9,7 @@ type CryptoBoxProps = {
 const CryptoBox = ({image, crypto}: CryptoBoxProps) => {
     return (
         <div className={styles.cryptoBoxContainer}>
-            <img src={image} alt={crypto}/>
+            <img src={image} alt={crypto} loading="lazy"/>
             <h2>{crypto}</h2>
         </div>
     )

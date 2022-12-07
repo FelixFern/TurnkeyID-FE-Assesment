@@ -11,7 +11,7 @@ const CryptoPriceBox = ({image, crypto, price, change} : CryptoBoxProps) => {
     console.log(change)
     return (
         <div className={styles.cryptoPriceBoxParent}> 
-            <img src={image} alt={crypto} />
+            <img src={image} alt={crypto} loading="lazy"/>
             <div className={styles.cryptoPrice}>
                 <h3>{crypto}</h3>
                 <h3 className={change > 0 ? styles.priceUp : styles.priceDown}>{price}</h3>

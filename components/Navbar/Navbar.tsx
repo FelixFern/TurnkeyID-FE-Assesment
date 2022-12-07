@@ -12,7 +12,7 @@ const Navbar = () => {
             <div className={styles.navbarParent}>
                 <div className={styles.navbarContent}>
                     <div className={styles.companyLogo} onClick={() => router.push('/')}>
-                        <img src="../img/logo.svg" alt=""/>
+                        <img src="../img/logo.svg" alt="logo-cryptolab" loading="lazy"/>
                         <h1>Crypto<span>LAB</span>
                         </h1>
                     </div>
@@ -50,7 +50,7 @@ const Navbar = () => {
             <div className={styles.navbarParentMobile}>
                 <div className={styles.navbarContent}>
                     <div className={styles.companyLogo} onClick={() => router.push('/')}>
-                        <img src="../img/logo.svg" alt=""/>
+                        <img src="../img/logo.svg" alt="logo-cryptolab" loading="lazy"/>
                     </div>
                     <div className={styles.hamburgerMenu} onClick={() => setShow(!showMenu)}>
                         <div className={showMenu ? [styles.line, styles.line1].join(' ') : styles.line}></div>

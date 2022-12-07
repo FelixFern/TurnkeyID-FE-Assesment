@@ -34,7 +34,7 @@ export default function Home() {
             </Head>
             <Navbar></Navbar>
             <div className={styles.hero}>
-                <img src="../img/hero-bg.svg" className={styles.heroBackground}/>
+                <img src="../img/hero-bg.svg" className={styles.heroBackground} alt='hero-bg' loading="lazy"/>
                 <div className={styles.heroContent}>
                     <div className={styles.leftCol}>
                         <h1>Grab on the
@@ -58,13 +58,13 @@ export default function Home() {
                         </div>
                     </div>
                     <div className={styles.rightCol}>
-                        <img src="./img/hero-illustration.png" alt=""/>
+                        <img src="./img/hero-illustration.png" alt="hero-illustration" loading="lazy"/>
                     </div>
                 </div>
 
             </div>
             <div className={styles.provide} id='provide'>
-                <img src="../img/provide-bg.svg" className={styles.provideBackground}/>
+                <img src="../img/provide-bg.svg" alt='provide-bg' className={styles.provideBackground} loading="lazy"/>
                 <div className={styles.provideContent}>
                     <div className={styles.title}>
                         <h2>What Do We
@@ -93,7 +93,7 @@ export default function Home() {
             <div className={styles.decentralized}>
                 <div className={styles.decentralizedContent}>
                     <div className={styles.leftCol}>
-                        <img src='../img/decentralized-illustration.svg'></img>
+                        <img src='../img/decentralized-illustration.svg' alt='decentralized-illustration' loading="lazy"></img>
                     </div>
                     <div className={styles.rightCol}>
                         <h1>Fully Decentralized <br/> <span>Exchange</span></h1>
