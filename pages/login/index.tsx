@@ -19,7 +19,7 @@ const Login = () => {
                     <h2>Sign In</h2>
                     <div className={styles.loginForm}>
                         <input className={styles.inputForm} placeholder='Username / Email'></input>
-                        <input className={styles.inputForm} placeholder='Password'></input>
+                        <input className={styles.inputForm} placeholder='Password' type='password'></input>
                     </div>
                     <Link href="#">
                         <p>Forgot Password?</p>

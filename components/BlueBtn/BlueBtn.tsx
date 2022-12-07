@@ -4,7 +4,7 @@ import styles from './BlueBtn.module.scss'
 type BtnProps = {
     text: string,
     link: string, 
-    type: number | null
+    type: number | null, 
 }
 
 const BlueBtn = ({text, link, type} : BtnProps) => {
